@@ -1,0 +1,39 @@
+.body .right .grid {
+	display: grid;
+	width: 100%;
+	grid-auto-rows: 1fr;
+	grid-column-gap: 5%;
+	grid-row-gap: 6vh;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.body .right .grid .item {
+	padding: 2vh 5%;
+	border: .25vh solid var(--theme-color);
+	border-radius: .5vh;
+	text-decoration: none;
+	transition: border-radius .5s ease;
+}
+
+.body .right .grid .item:hover {
+	border-radius: 1.25vh;
+}
+
+.body .right .grid .item h3 {
+	font-size: 2.5vh;
+	margin: 0;
+	margin-bottom: 1.3vh;
+	color: #ffffff;
+}
+
+.body .right .grid .item p {
+	font-size: 1.75vh;
+	margin: 0;
+	color: #ffffff;
+}
+
+@media screen and (max-width: 600px), (orientation : portrait) {
+	.body .right .grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
